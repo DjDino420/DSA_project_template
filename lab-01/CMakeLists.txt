@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.26)
-project(Cppfeladat)
+project(lab_01 C)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_STANDARD 11)
 
-add_executable(Cppfeladat main.cpp
-        Sources/functions.cpp
-        Headers/functions.h)
+add_executable(lab_01 main.c
+        basics.c
+        basics.h)
