@@ -19,6 +19,26 @@ int main() {
             int n=5,*pArray = NULL;
             readArray(&n,&pArray,"../be.txt");
         }
+        case 4: {
+            int n, x;
+            scanf("%d %d", &n, &x);
+            printf("hatvany: %d\n", power(n, x));
+            break;
+        }
+        case 5: {
+            int a, b;
+            scanf("%d %d", &a, &b);
+            printf("lnko: %d\n", lnko(a, b));
+            break;
+        }
+        case 6: {
+            int a, b;
+            scanf("%d %d", &a, &b);
+            printf("lkkt: %d\n", lkkt(a, b));
+            break;
+        }
+        default:
+            printf("error\n");
 
     }
     return 0;

@@ -49,3 +49,29 @@ void deallocateMemoryForArray(int **dpArray) {
     free(*dpArray);
     *dpArray=NULL;
 }
+
+int power(int n, int x) {
+    int result = 1;
+
+    for (int i = 0; i < x; ++i) {
+        result *= n;
+    }
+
+    return result;
+}
+
+int lnko(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int lkkt(int a, int b) {
+    if (a == 0 || b == 0) {
+        return 0;
+    }
+    return abs(a * b) / lnko(a, b);
+}
