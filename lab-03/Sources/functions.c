@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
+
 int sum(int a, int b){
     return a+b;
 }
@@ -83,11 +85,12 @@ int sumOfPositiveNumbers(int n, int *pArray) {
 }
 
 void allocateMemoryForMatrix2(int rows, int cols, int ***dpMatrix) {
-    **dpMatrix=(int **) malloc(rows*sizeof (int *));
+    *dpMatrix = (int **)malloc(rows * sizeof(int *));
     for (int i = 0; i < rows; i++) {
-        *dpMatrix[i] = (int *)malloc(cols * sizeof(int));
+        (*dpMatrix)[i] = (int *)malloc(cols * sizeof(int));
     }
 }
+
 
 void readMatrix(int *pRows, int *pCols, int ***dpArray, const char *input) {
     printf("%s\n", input);
@@ -116,13 +119,17 @@ void readMatrix(int *pRows, int *pCols, int ***dpArray, const char *input) {
         fclose(in);
     }
 }
-void reverseMatrix(int *pRows, int *pCols, int ***dpArray, const char *input){
-    for (int i = *pRows; i > 0; ++i) {
-        for (int j = *pCols; j < 0; ++j) {
-            printf("%i", &(*dpArray)[i][j]);
+void reverseMatrix(int *pRows, int *pCols, int ***dpArray, const char *input) {
+    printf("Reversed Matrix:\n");
+
+    for (int i = *pRows - 1; i >= 0; --i) {
+        for (int j = *pCols - 1; j >= 0; --j) {
+            printf("%i ", (*dpArray)[i][j]);
         }
+        printf("\n");
     }
 }
+
 float average(int n, int *pArray) {
     if (n <= 0) {
         return 0.0; //
@@ -173,4 +180,4 @@ int sumArray(int *a,int n){
 
 
 
-#include "../Headers/functions.h"
+

@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 23)
 
 add_executable(lab_02 main.c
         Sources/functions.c
-        Headers/functions.h)
+        Headers/functions.h
+        ../lab-03/Headers/functions.h)
