@@ -2,8 +2,8 @@
 // Created by user on 2/28/2024.
 //
 
-#ifndef LAB_02_FUNCTIONS_H
-#define LAB_02_FUNCTIONS_H
+#ifndef LAB_03_FUNCTIONS_H
+#define LAB_03_FUNCTIONS_H
 int sum(int a, int b);
 float mini(float a,float b, float c);
 void allocateMemoryForArray(int n, int **dpArray);
@@ -14,10 +14,13 @@ int numberOfEvenNumbers(int n, int *pArray);
 int sumOfPositiveNumbers(int n, int *pArray);
 void allocateMemoryForMatrix2(int rows, int cols, int ***dpMatrix);
 void readMatrix(int *pRows, int *pCols, int ***dpArray, const char *input);
+void reverseMatrix(int *pRows, int *pCols, int ***dpArray, const char *input);
 
 float average(int n, int *pArray);
 
 int numberOfOddNumbers(int n, int *pArray);
 int productOfNegativeNumbers(int n, int *pArray);
 void digitNumbers(int n);
-#endif //LAB_02_FUNCTIONS_H
+int sumArray(int *a,int n);
+
+#endif //LAB_03_FUNCTIONS_H

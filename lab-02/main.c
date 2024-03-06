@@ -31,6 +31,11 @@ int main() {
             readMatrix(&rows,&cols,&matrix,"CON");
 
         }
+        case 4:{
+            int n;
+            scanf("%i",&n);
+            digitNumbers(n);
+        }
     }
     return 0;
 }

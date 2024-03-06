@@ -82,14 +82,12 @@ int sumOfPositiveNumbers(int n, int *pArray) {
     return aux;
 }
 
-
 void allocateMemoryForMatrix2(int rows, int cols, int ***dpMatrix) {
-    *dpMatrix = (int **)malloc(rows * sizeof(int *));
+    **dpMatrix=(int **) malloc(rows*sizeof (int *));
     for (int i = 0; i < rows; i++) {
-        (*dpMatrix)[i] = (int *)malloc(cols * sizeof(int));
+        *dpMatrix[i] = (int *)malloc(cols * sizeof(int));
     }
 }
-
 
 void readMatrix(int *pRows, int *pCols, int ***dpArray, const char *input) {
     printf("%s\n", input);
@@ -165,6 +163,14 @@ void digitNumbers(int n) {
         digitNumbers(n/10);
     }
 }
+int sumArray(int *a,int n){
+    int s=0;
+    for (int i = 0; i < n; ++i) {
+        s+=a[i];
+    }
+    return s;
+}
+
 
 
 #include "../Headers/functions.h"
